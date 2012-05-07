@@ -16,3 +16,6 @@ nosetests.xml
 instance/settings.py
 instance/testing.py
 instance/production.py
+instance/development.py
+baseframe-packed.css
+baseframe-packed.js
