@@ -21,7 +21,7 @@ def login():
 @app.route('/logout')
 @lastuser.logout_handler
 def logout():
-    flash(u"You are now logged out", category='info')
+    flash(u"You are now logged out", category='success')
     return get_next_url()
 
 
