@@ -5,12 +5,11 @@
 from flask import Flask
 from flask.ext.assets import Environment, Bundle
 from baseframe import baseframe, baseframe_js, baseframe_css
-from coaster import configureapp
+import coaster.app
 
-# First, make an app and config it
+# First, make an app
 
 app = Flask(__name__, instance_relative_config=True)
-configureapp(app, 'ENVIRONMENT')
 
 # Second, after config, import the models and views
 
@@ -25,8 +24,12 @@ assets = Environment(app)
 js = Bundle(baseframe_js)
 css = Bundle(baseframe_css,
              'css/app.css')
-assets.register('js_all', js)
-assets.register('css_all', css)
+
+# Configure the app
+def init_for(env):
+    coaster.app.configureapp(app, env)
+    assets.register('js_all', js)
+    assets.register('css_all', css)
 
 # Fourth, setup admin for the models
 
