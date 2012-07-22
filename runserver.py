@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from hgapp import init_for
+from hgapp import app, init_for
 from hgapp.models import db
 init_for('dev')
 db.create_all()

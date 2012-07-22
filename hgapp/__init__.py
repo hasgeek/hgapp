@@ -27,18 +27,6 @@ css = Bundle(baseframe_css,
 
 # Configure the app
 def init_for(env):
-    coaster.app.configureapp(app, env)
+    coaster.app.init_app(app, env)
     assets.register('js_all', js)
     assets.register('css_all', css)
-
-# Fourth, setup admin for the models
-
-from flask.ext import admin
-from flask.ext.admin.datastore.sqlalchemy import SQLAlchemyDatastore
-from hgapp.views.login import lastuser
-
-admin_datastore = SQLAlchemyDatastore(hgapp.models, hgapp.models.db.session)
-admin_blueprint = admin.create_admin_blueprint(admin_datastore,
-    view_decorator=lastuser.requires_permission('siteadmin'))
-
-app.register_blueprint(admin_blueprint, url_prefix='/admin')
