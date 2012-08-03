@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from flask import Response, redirect, flash
-from flask.ext.lastuser import LastUser
 from flask.ext.lastuser.sqlalchemy import UserManager
 from coaster.views import get_next_url
 
-from hgapp import app
+from hgapp import app, lastuser
 from hgapp.models import db, User
 
-lastuser = LastUser(app)
 lastuser.init_usermanager(UserManager(db, User))
 
 
