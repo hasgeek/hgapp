@@ -13,10 +13,12 @@ dist/
 .webassets-cache
 nosetests.xml
 .sass-cache
-instance/settings.py
+.idea
 instance/testing.py
 instance/production.py
 instance/development.py
 baseframe-packed.css
 baseframe-packed.js
+packed.css
+packed.js
 error.log

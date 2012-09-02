@@ -1,13 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from flask import Response, redirect, flash
-from flask.ext.lastuser.sqlalchemy import UserManager
 from coaster.views import get_next_url
 
 from hgapp import app, lastuser
-from hgapp.models import db, User
-
-lastuser.init_usermanager(UserManager(db, User))
 
 
 @app.route('/login')
@@ -26,8 +22,6 @@ def logout():
 @app.route('/login/redirect')
 @lastuser.auth_handler
 def lastuserauth():
-    # Save the user object
-    db.session.commit()
     return redirect(get_next_url())
 
 
