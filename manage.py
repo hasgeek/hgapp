@@ -1,4 +1,4 @@
-# manage.py
+#!/usr/bin/env python
 
 from flask.ext.script import Manager, Server, Option, prompt_bool
 from flask.ext.script.commands import Clean, ShowUrls
