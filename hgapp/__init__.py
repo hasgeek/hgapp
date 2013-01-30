@@ -17,6 +17,7 @@ lastuser = Lastuser()
 # Second, import the models and views
 
 import hgapp.models
+from hgapp.models import db
 import hgapp.views
 
 # Third, setup baseframe and assets

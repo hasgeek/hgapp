@@ -29,7 +29,6 @@ class InitedMigrations(ManageMigrations):
     def run(self, args):
         if len(args) and not args[0].startswith('-'):
             init_for(args[0])
-            app.db = db  # So Flask-Alembic can find it
         super(InitedMigrations, self).run(args[1:])
 
 
