@@ -17,8 +17,8 @@ lastuser = Lastuser()
 # Second, import the models and views
 
 import hgapp.models
-from hgapp.models import db
 import hgapp.views
+from hgapp.models import db
 
 # Third, setup baseframe and assets
 
@@ -35,4 +35,4 @@ assets.register('css_all', css)
 def init_for(env):
     coaster.app.init_app(app, env)
     lastuser.init_app(app)
-    lastuser.init_usermanager(UserManager(hgapp.models.db, hgapp.models.User))
+    lastuser.init_usermanager(UserManager(db, hgapp.models.User))
