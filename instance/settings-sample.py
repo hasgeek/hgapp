@@ -3,6 +3,12 @@
 SITE_TITLE = 'HasGeek App'
 #: Site id (for network bar)
 SITE_ID = ''
+#: Google Analytics code
+GA_CODE = ''
+#: Google site verification code (inserted as a meta tag)
+GOOGLE_SITE_VERIFICATION = ''
+#: Typekit code
+TYPEKIT_CODE = ''
 #: Database backend
 SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
 #: Secret key
