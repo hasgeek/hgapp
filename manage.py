@@ -16,7 +16,7 @@ database = Manager(usage="Perform database operations")
 class InitedServer(Server):
     def get_options(self):
         return super(InitedServer, self).get_options() + (
-        Option('-e', dest='env', default='dev', help="run server for this environment [default 'dev']"),
+            Option('-e', dest='env', default='dev', help="run server for this environment [default 'dev']"),
         )
 
     def handle(self, *args, **kwargs):
