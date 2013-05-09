@@ -3,7 +3,6 @@
 # The imports in this file are order-sensitive
 
 from flask import Flask
-from flask.ext.assets import Environment, Bundle
 from flask.ext.lastuser import Lastuser
 from flask.ext.lastuser.sqlalchemy import UserManager
 from baseframe import baseframe, assets, Version
