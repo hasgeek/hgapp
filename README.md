@@ -1,7 +1,7 @@
 HasGeek App Boilerplate
 =======================
 
-Base template for an app that uses LastUser, BaseFrame and Coaster with Flask
+Base template for an app that uses Lastuser, Baseframe and Coaster with Flask
 and SQLAlchemy. To use this, clone this repository and rename all references
 to "hgapp" with the name of your new app.
 

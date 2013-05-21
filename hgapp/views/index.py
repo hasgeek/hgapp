@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import render_template
-from hgapp import app
+from .. import app
 
 
 @app.route('/')

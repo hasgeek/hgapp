@@ -1,4 +1,3 @@
 # -*- coding: utf-8 -*-
 
-import hgapp.views.index
-import hgapp.views.login
+from . import index, login

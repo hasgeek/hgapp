@@ -15,11 +15,11 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
 SECRET_KEY = 'make this something random'
 #: Timezone
 TIMEZONE = 'Asia/Calcutta'
-#: LastUser server
+#: Lastuser server
 LASTUSER_SERVER = 'https://auth.hasgeek.com/'
-#: LastUser client id
+#: Lastuser client id
 LASTUSER_CLIENT_ID = ''
-#: LastUser client secret
+#: Lastuser client secret
 LASTUSER_CLIENT_SECRET = ''
 #: Mail settings
 #: MAIL_FAIL_SILENTLY : default True

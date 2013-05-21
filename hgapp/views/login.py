@@ -3,7 +3,7 @@
 from flask import Response, redirect, flash
 from coaster.views import get_next_url
 
-from hgapp import app, lastuser
+from .. import app, lastuser
 
 
 @app.route('/login')
