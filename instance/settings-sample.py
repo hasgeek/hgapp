@@ -14,7 +14,7 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
 #: Secret key
 SECRET_KEY = 'make this something random'
 #: Timezone
-TIMEZONE = 'Asia/Calcutta'
+TIMEZONE = 'Asia/Kolkata'
 #: Lastuser server
 LASTUSER_SERVER = 'https://auth.hasgeek.com/'
 #: Lastuser client id
