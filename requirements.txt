@@ -5,3 +5,4 @@ Flask-SQLAlchemy
 https://github.com/hasgeek/flask-lastuser/archive/master.zip
 Flask-Script
 https://github.com/jace/flask-alembic/archive/master.zip
+Flask-RQ
