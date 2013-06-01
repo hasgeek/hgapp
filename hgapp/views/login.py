@@ -4,6 +4,7 @@ from flask import Response, redirect, flash
 from coaster.views import get_next_url
 
 from .. import app, lastuser
+from ..models import db
 
 
 @app.route('/login')
@@ -23,6 +24,15 @@ def logout():
 @lastuser.auth_handler
 def lastuserauth():
     return redirect(get_next_url())
+
+
+@app.route('/login/notify', methods=['POST'])
+@lastuser.notification_handler
+def lastusernotify(user):
+    # Perform operations here if required.
+    # Warning: this *could* be a spoof call, so ignore all request data.
+    # Only trust the 'user' parameter to this function.
+    db.session.commit()
 
 
 @lastuser.auth_error_handler
