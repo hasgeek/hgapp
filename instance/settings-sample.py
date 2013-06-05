@@ -37,3 +37,5 @@ DEFAULT_MAIL_SENDER = ('HasGeek', 'test@example.com')
 ADMINS = []
 #: Log file
 LOGFILE = 'error.log'
+# redis settings for RQ
+REDIS_URL = 'redis://localhost:6379/0'
