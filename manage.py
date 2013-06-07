@@ -5,9 +5,9 @@ from flask.ext.script.commands import Clean, ShowUrls
 from flask.ext.alembic import ManageMigrations, FlaskAlembicConfig
 from alembic import command
 
-from . import app, init_for
-from . import models
-from .models import db
+from hgapp import app, init_for
+from hgapp import models
+from hgapp.models import db
 
 
 manager = Manager(app)
