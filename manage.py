@@ -45,6 +45,7 @@ def drop(env):
     if prompt_bool("Are you sure you want to lose all your data?"):
         db.drop_all()
 
+
 @database.option('-e', '--env', default='dev', help="runtime environment [default 'dev']")
 def create(env):
     "Creates database tables from sqlalchemy models"
@@ -52,6 +53,7 @@ def create(env):
     db.create_all()
     config = FlaskAlembicConfig("alembic.ini")
     command.stamp(config, "head")
+
 
 @database.option('-e', '--env', default='dev', help="runtime environment [default 'dev']")
 def setversion(env):
