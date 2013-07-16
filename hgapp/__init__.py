@@ -8,8 +8,9 @@ from flask.ext.lastuser import Lastuser
 from flask.ext.lastuser.sqlalchemy import UserManager
 from baseframe import baseframe, assets, Version
 import coaster.app
+from ._version import __version__
 
-version = Version('0.1.0')
+version = Version(__version__)
 
 # First, make an app
 
