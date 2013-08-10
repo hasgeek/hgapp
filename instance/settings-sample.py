@@ -13,6 +13,8 @@ TYPEKIT_CODE = ''
 SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
 #: Secret key
 SECRET_KEY = 'make this something random'
+#: Cache type
+CACHE_TYPE = 'redis'
 #: Timezone
 TIMEZONE = 'Asia/Kolkata'
 #: Lastuser server
@@ -29,10 +31,11 @@ LASTUSER_CLIENT_SECRET = ''
 #: MAIL_USE_SSL : default False
 #: MAIL_USERNAME : default None
 #: MAIL_PASSWORD : default None
-#: DEFAULT_MAIL_SENDER : default None
+#: MAIL_DEFAULT_SENDER : default None
 MAIL_FAIL_SILENTLY = False
 MAIL_SERVER = 'localhost'
-DEFAULT_MAIL_SENDER = ('HasGeek', 'test@example.com')
+MAIL_DEFAULT_SENDER = ('HasGeek', 'test@example.com')
+DEFAULT_MAIL_SENDER = MAIL_DEFAULT_SENDER  # For compatibility with older Flask-Mail
 #: Logging: recipients of error emails
 ADMINS = []
 #: Log file
