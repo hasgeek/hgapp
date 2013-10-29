@@ -1,6 +1,5 @@
 Flask
 Flask-SQLAlchemy
-Flask-Script
 Flask-RQ
 https://github.com/hasgeek/coaster/archive/master.zip
 https://github.com/hasgeek/baseframe/archive/master.zip
