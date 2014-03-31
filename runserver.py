@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import sys
 from hgapp import app, init_for
 init_for('dev')
