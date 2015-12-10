@@ -23,3 +23,7 @@ baseframe-packed.js
 packed.css
 packed.js
 error.log
+*.sql
+*.sql.gz
+*.sql.bz2
+node_modules/
