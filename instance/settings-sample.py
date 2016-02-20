@@ -10,7 +10,7 @@ GOOGLE_SITE_VERIFICATION = ''
 #: Typekit code
 TYPEKIT_CODE = ''
 #: Database backend
-SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
+SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/hgapp'
 #: Secret key
 SECRET_KEY = 'make this something random'
 #: Cache type
@@ -23,6 +23,10 @@ LASTUSER_SERVER = 'https://auth.hasgeek.com/'
 LASTUSER_CLIENT_ID = ''
 #: Lastuser client secret
 LASTUSER_CLIENT_SECRET = ''
+#: Lastuser secret key
+LASTUSER_SECRET_KEY = SECRET_KEY
+#: Lastuser cookie domain
+LASTUSER_COOKIE_DOMAIN = None  # if hosting multiple apps in subdomains, use '.mydomain.tld'
 #: Mail settings
 #: MAIL_FAIL_SILENTLY : default True
 #: MAIL_SERVER : default 'localhost'
