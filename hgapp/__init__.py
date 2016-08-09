@@ -19,7 +19,7 @@ lastuser = Lastuser()
 
 # Second, import the models and views
 
-from . import models, views
+from . import models, views  # NOQA
 from .models import db
 
 # Third, setup baseframe and assets
