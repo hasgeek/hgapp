@@ -1,8 +1,6 @@
 Flask
 Flask-SQLAlchemy
-Flask-Script==0.5.3
 Flask-RQ
 https://github.com/hasgeek/coaster/archive/master.zip
 https://github.com/hasgeek/baseframe/archive/master.zip
 https://github.com/hasgeek/flask-lastuser/archive/master.zip
-https://github.com/jace/flask-alembic/archive/master.zip

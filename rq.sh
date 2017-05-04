@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rqworker -c rqdev hgapp
+rqworker -c rqinit hgapp
