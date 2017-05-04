@@ -27,12 +27,10 @@ from .models import db
 assets['hgapp.js'][version] = 'js/app.js'
 assets['hgapp.css'][version] = 'css/app.css'
 
-
 # Configure the app
-def init_for(env):
-    coaster.app.init_app(app, env)
-    db.init_app(app)
-    db.app = app
-    baseframe.init_app(app, requires=['baseframe-bs3', 'hgapp'])
-    lastuser.init_app(app)
-    lastuser.init_usermanager(UserManager(db, models.User))
+coaster.app.init_app(app)
+db.init_app(app)
+db.app = app
+baseframe.init_app(app, requires=['baseframe-bs3', 'hgapp'])
+lastuser.init_app(app)
+lastuser.init_usermanager(UserManager(db, models.User))
