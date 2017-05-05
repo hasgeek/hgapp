@@ -6,7 +6,8 @@ HasGeek App Boilerplate
 
 Base template for an app that uses Lastuser, Baseframe and Coaster with Flask
 and SQLAlchemy. To use this, clone this repository and rename all references
-to "hgapp" with the name of your new app.
+to "hgapp" with the name of your new app, then create a template for database
+migrations using `python manage.py db init`.
 
 This boilerplate uses Compass for custom stylesheets. Stylesheets are located
 in `hgapp/static/sass` and may be rebuilt with `compass compile`. To rebuild
