@@ -16,6 +16,8 @@ version = Version(__version__)
 # First, make an app
 
 app = Flask(__name__, instance_relative_config=True)
+app.jinja_env.auto_reload = True
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 lastuser = Lastuser()
 
 # Second, import the models and views
@@ -33,6 +35,6 @@ coaster.app.init_app(app)
 db.init_app(app)
 db.app = app
 migrate = Migrate(app, db)
-baseframe.init_app(app, requires=['baseframe-bs3', 'hgapp'])
+baseframe.init_app(app, requires=['baseframe-mui', 'hgapp'])
 lastuser.init_app(app)
 lastuser.init_usermanager(UserManager(db, models.User))

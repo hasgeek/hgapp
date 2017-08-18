@@ -1,13 +1,306 @@
-{% extends "layout.html" %}
-{% block titletags -%}
-  <title>{% block title %}{{ config['SITE_TITLE'] }}{% endblock %}</title>
-  <meta name="DC.title" content="{{ config['SITE_TITLE'] }}"/>
+{% extends "baseframe-material.html" -%}
+{% from "baseframe/components.html" import hgtopnavmaterial, hgsubtopnavmaterial, hgsidenavmaterial with context %}
+
+{% block title %}Material design kitchen sink page{% endblock %}
+
+{% block sidedrawerinner -%}
+  {% with site_links=[] %}
+  	{% set site_links = site_links + [{'title': "Applied jobs", 'url': 'http://test.com', 'icon': 'assignment'}] %}
+  	{% set site_links = site_links + [{'title': "Bookmarks", 'url': 'http://test.com', 'icon': 'bookmark'}] %}
+		{{ hgsidenavmaterial(site_title="Hasjob", site_links=site_links) }}
+	{% endwith %}
 {%- endblock %}
 
-{% block content %}
+{% block header -%}
+	{{ hgtopnavmaterial(site_title="Hasjob") }}
+{%- endblock %}
 
-<p>
-  Insert content here.
-</p>
+{% block subheaderbox -%}
+  {% with site_sub_links=[] %}
+   	{% set site_sub_links = site_sub_links + [{'title': "Home", 'url': 'http://test.com', 'icon': 'home'}] %}
+   	{% set site_sub_links = site_sub_links + [{'title': "Post a job", 'url': 'http://test.com', 'icon': 'add_circle'}] %}
+		{{ hgsubtopnavmaterial(site_sub_links=site_sub_links) }}
+	{% endwith %}
+{%- endblock %}
 
+{% block basecontent %}
+
+  <!--Typography -->
+	<div>
+	  <h1>Typography</h1>
+		<p class="mui--text-display3">Display3</p>
+		<p class="mui--text-display2">Display2</p>
+		<p class="mui--text-display1">Display1</p>
+		<p class="mui--text-headline">Headline</p>
+		<p class="mui--text-title">Title</p>
+		<p class="mui--text-subhead">Subhead</p>
+		<p class="mui--text-body2">Body2</p>
+		<p class="mui--text-body1">Body1</p>
+		<p class="mui--text-caption">Caption</p>
+		<p class="mui--text-menu">Menu</p>
+		<h1>H1</h1>
+		<h2>H2</h2>
+		<h3>H3</h3>
+		<h4>H4</h4>
+		<h5>H5</h5>
+		<h6>H6</h6>
+	</div>
+	<hr>
+
+  <!--Card -->
+  <div>
+		<h1>Card</h1>
+		<div class="grid">
+		  <div class="grid__col-12 grid__col-xs-12 grid__col-sm-6 grid__col-lg-4">
+		    <div class="grid__cell">
+		      <div class="card">
+			      <img src="../static/img/fifthel-banner.png" class="card__image">
+			      <div class="card__title">
+			        <h3 class="mui--text-title">Fifth Elephant 2017</h3>
+			        <h4 class="mui--text-subhead">27–28 July 2017, Bangalore</h4>
+			      </div>
+			      <div class="card__body">
+			        <p>The Fifth Elephant is India’s best conference on data science, engineering and Machine Learning. This year is the sixth edition, and will feature talks on data engineering, architecture decisions, building data pipelines, IoT and data analytics.</p>
+			      </div>
+			      <div class="mui-divider"></div>
+			      <div class="card__footer">
+			       	<a href="https://fifthelephant.in/2017" class="mui-btn mui-btn--flat mui-btn--accent">Tickets</a>
+			       	<a href="https://fifthelephant.talkfunnel.com/2017/" class="mui-btn mui-btn--flat mui-btn--accent">Proposals</a>
+			    	</div>
+		    	</div>
+		    </div>
+		  </div>
+
+		  <div class="grid__col-12 grid__col-xs-12 grid__col-sm-6 grid__col-lg-4">
+		    <div class="grid__cell">
+		      <div class="card">
+			      <img src="../static/img/jsfoo-banner.png" class="card__image">
+			      <div class="card__title">
+			        <h3 class="mui--text-title">JSFoo 2017</h3>
+			        <h4 class="mui--text-subhead">15–16 September 2017, Bangalore</h4>
+			      </div>
+			      <div class="card__body">
+			        <p>Our annual conference on JavaScript.</p>
+			      </div>
+			      <div class="mui-divider"></div>
+			      <div class="card__footer">
+			       	<a href="https://jsfoo.in/2017" class="mui-btn mui-btn--flat mui-btn--accent">Tickets</a>
+			       	<a href="https://jsfoo.talkfunnel.com/2017/" class="mui-btn mui-btn--flat mui-btn--accent">Proposals</a>
+			    	</div>
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+
+    <h1>Card</h1>
+  	<div class="grid">
+			<div class="grid__col-12 grid__col-xs-12 grid__col-sm-6 grid__col-lg-4">
+		    <div class="grid__cell">
+		      <div class="card">
+			      <div class="card__header">
+			        <div class="card__header--title">
+			        	<h3 class="mui--text-title">Kilter 2018</h3>
+			        	<h4 class="mui--text-subhead">1–2 April 2018</h4>
+			        </div>
+			        <img class="card__header--logo-image" src="https://images.hasgeek.com/embed/file/eaaffeb43d0249b8b460388e4389df9c">
+			      </div>
+			      <div class="card__body">
+			        <p>Kilter is a new conference on improving your body via better nutrition, fitness and habits.</p>
+			      </div>
+			      <div class="mui-divider"></div>
+			      <div class="card__footer">
+			       	<a href="https://kilter.in/2018" class="mui-btn mui-btn--flat mui-btn--accent">Tickets</a>
+			       	<a href="https://kilter.talkfunnel.com/2018/" class="mui-btn mui-btn--flat mui-btn--accent">Proposals</a>
+			    	</div>
+		    	</div>
+		    </div>
+		  </div>
+
+		  <div class="grid__col-12 grid__col-xs-12 grid__col-sm-6 grid__col-lg-4">
+		    <div class="grid__cell">
+		      <div class="card">
+			      <div class="card__header">
+			        <div class="card__header--title">
+			        	<h3 class="mui--text-title">Front-End Developer</h3>
+			        	<h4 class="mui--text-subhead">Playo</h4>
+			        </div>
+			        <img class="card__header--logo-image" src="https://hasjob.co/_uploads/logos/cut27.png">
+			      </div>
+			      <div class="card__body">
+			        <p>We are looking for a kickass software engineer to manage Web Development as a part of the core team and get to live the startup life. Yes, we’re a high growth venture with significant traction and revenues besides money in the bank. More importantly though, we are a bunch of sports crazy freaks with a love for consumer apps and all things cool. So if you are a self-starter with attention to details, a penchant for perfection and look for solutions rather than just narrating the problem - then you’re the one for us.</p>
+			        <span class="chip">
+    						<span class="chip__text">Bangalore</span>
+							</span>
+							<span class="chip">
+    						<span class="chip__text">Full time</span>
+							</span>
+			      </div>
+			      <div class="mui-divider"></div>
+			      <div class="card__footer">
+			       	<a href="https://hasgeek.com" class="mui-btn mui-btn--flat mui-btn--accent">Apply</a>
+			    	</div>
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<hr>
+
+  <!-- Buttons -->
+  <div>
+		<h1>Buttons</h1>
+		<h3>Raised buttons</h3>
+		<div>
+	<!-- 	  <button class="mui-btn mui-btn--raised">Button</button> -->
+			<button class="mui-btn mui-btn--raised mui-btn--primary" href="#">Primary</button>
+			<button class="mui-btn mui-btn--raised mui-btn--accent" href="#">Secondary</button>
+			<button class="mui-btn mui-btn--raised mui-btn--danger" href="#">Secondary</button>
+		</div>
+		<h3>Floating action buttons</h3>
+		<div>
+			<!-- <button class="mui-btn mui-btn--fab">+</button> -->
+	  	<button class="mui-btn mui-btn--fab mui-btn--primary"><i class="material-icons">add</i></button>
+	  	<button class="mui-btn mui-btn--fab mui-btn--danger"><i class="material-icons">search</i></button>
+	  	<button class="mui-btn mui-btn--fab mui-btn--accent"><i class="material-icons">add</i></button>
+	  </div>
+	</div>
+	<hr>
+
+ <!-- Panel -->
+	<div>
+	  <h1>Panel</h1>
+    <div class="mui-panel">
+      <h1>HasGeek</h1>
+      <p>HasGeek creates discussion spaces for geeks. Come to our events to meet like-minded people, learn new things and discover new opportunities.</p>
+      <button class="mui-btn mui-btn--primary mui-btn--raised">Know more</button>
+    </div>
+	</div>
+	<hr>
+
+	<!-- Alerts -->
+	<div>
+	  <h1>Alerts</h1>
+    <div class="alert alert--success alert--dismissable">
+      <a class="alert__close" href="javascript:void(0);" aria-label="close"><i class="material-icons">clear</i></a>
+      <h3 class="alert__heading">HasGeek</h3>
+      <p class="alert__text">Well done! You successfully read this important <a class="alert__link" href="#">alert message.</a></p>
+    </div>
+
+    <div class="alert alert--info alert--dismissable">
+      <a class="alert__close" href="javascript:void(0);" aria-label="close"><i class="material-icons">clear</i></a>
+      <p class="alert__text"><i class="material-icons alert__icon">report_problem</i> You have four read messages</p>
+    </div>
+
+    <div class="alert alert--warning alert--dismissable">
+      <a class="alert__close" href="javascript:void(0);" aria-label="close"><i class="material-icons">clear</i></a>
+      <p class="alert__text"><i class="material-icons alert__icon">warning</i>  User has to be an admin</p>
+    </div>
+
+    <div class="alert alert--danger alert--dismissable">
+      <a class="alert__close" href="javascript:void(0);" aria-label="close"><i class="material-icons">clear</i></a>
+      <p class="alert__text"><i class="material-icons alert__icon">error</i> Internal server error</p>
+    </div>
+	</div>
+	<hr>
+
+  <!-- Dropdown -->
+  <div>
+    <h1>Dropdown</h1>
+		<div class="mui-dropdown">
+		  <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+		    Dropdown
+		    <span class="mui-caret"></span>
+		  </button>
+		  <ul class="mui-dropdown__menu">
+		    <li><a href="#">Option 1</a></li>
+		    <li><a href="#">Option 2</a></li>
+		    <li><a href="#">Option 3</a></li>
+		    <li><a href="#">Option 4</a></li>
+		  </ul>
+		</div>
+	</div>
+	<hr>
+
+	<!-- Forms -->
+	<div>
+	  <h1>Form</h1>
+	  <form method="POST" accept-charset="UTF-8" class="mui-form">	  
+	    <div>
+	      <div>
+	        <div class="mui-textfield mui-textfield--float-label">
+	          <input autofocus class="field-title" name="title" type="text" value="">
+	          <label>Application title*</label>
+	            <p class="mui-form--helptext">The name of your application</p>
+	        </div>
+	      </div>
+	    </div>  
+	    <div>
+	      <div>
+	        <div class="mui-checkbox">
+	          <label>
+	            <input class="field-team_access" id="team_access" name="team_access" type="checkbox" value="y"> Requires access to teams
+	          </label>
+	        </div>
+	        <p class="mui-form--helptext">If your application is capable of assigning access permissions to teams, check this. Organization owners will then able to grant access to teams in their organizations</p>
+	      </div>
+	    </div>
+		  <div class="mui-form form-actions clearfix">
+		  	<div>
+		    	<button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">Register application</button>
+		  	</div>
+			</div>
+		</form>
+	</div>
+	<hr>
+
+	<!-- Table -->
+	<div>
+	  <h1>Table</h1>
+	    <div class="table-wrapper">
+			  <table class="mui-table mui-table--bordered">
+					<thead>
+						<tr>
+							<th>Category</th> 
+							<th>#</th> <th>Ticket</th> 
+							<th>Available</th> 
+							<th>Sold</th> 
+							<th>Free</th> 
+							<th>Cancelled</th> 
+							<th>Current Price</th> 
+							<th>Net Sales</th>
+						</tr>
+					</thead> 
+					<tbody>
+						<tr>
+							<td>Conference</td> 
+							<td>1</td> 
+							<td>Fragments 2017 conference ticket</td> 
+							<td>560</td> 
+							<td>40</td> 
+							<td>0</td> 
+							<td>2</td> 
+							<td>₹5,100</td> 
+							<td>₹1,66,470</td>
+						</tr>
+						<tr>
+						  <td>Conference</td> 
+							<td>2</td> 
+							<td>Cross-platform developer ticket</td> 
+							<td>497</td> 
+							<td>3</td> 
+							<td>0</td> 
+							<td>0</td> 
+							<td>₹12,700</td> 
+							<td>₹33,200</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	</div>
+
+	</div>
+{% endblock %}
+
+{% block footer -%}
+  {{ config['MESSAGE_FOOTER'] }}
 {% endblock %}
