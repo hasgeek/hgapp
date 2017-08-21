@@ -7,7 +7,7 @@
   {% with site_links=[] %}
   	{% set site_links = site_links + [{'title': "Applied jobs", 'url': 'http://test.com', 'icon': 'assignment'}] %}
   	{% set site_links = site_links + [{'title': "Bookmarks", 'url': 'http://test.com', 'icon': 'bookmark'}] %}
-		{{ hgsidenavmaterial(site_title="Hasjob", site_links=site_links) }}
+		{{ hgsidenavmaterial(site_title, site_logo="https://hasgeek.com/static/img/hg-banner.png", site_links=site_links) }}
 	{% endwith %}
 {%- endblock %}
 
@@ -98,11 +98,11 @@
 		    <div class="grid__cell">
 		      <div class="card">
 			      <div class="card__header">
-			        <div class="card__header--title">
-			        	<h3 class="mui--text-title">Kilter 2018</h3>
-			        	<h4 class="mui--text-subhead">1–2 April 2018</h4>
+			        <div class="card__header__title">
+			        	<h3 class="mui--text-title card__header__title__heading">Kilter 2018</h3>
+			        	<h4 class="mui--text-subhead card__header__title__heading">1–2 April 2018</h4>
 			        </div>
-			        <img class="card__header--logo-image" src="https://images.hasgeek.com/embed/file/eaaffeb43d0249b8b460388e4389df9c">
+			        <img class="card__header__logo-image" src="https://images.hasgeek.com/embed/file/eaaffeb43d0249b8b460388e4389df9c">
 			      </div>
 			      <div class="card__body">
 			        <p>Kilter is a new conference on improving your body via better nutrition, fitness and habits.</p>
@@ -120,25 +120,26 @@
 		    <div class="grid__cell">
 		      <div class="card">
 			      <div class="card__header">
-			        <div class="card__header--title">
-			        	<h3 class="mui--text-title">Front-End Developer</h3>
-			        	<h4 class="mui--text-subhead">Playo</h4>
+			        <div class="card__header__title">
+			          <div class="card__header__title__tag"><span>New!</span></div>
+			        	<h4 class="mui--text-subhead card__header__title__heading">12 July</h4>
+			        	<h3 class="mui--text-title card__header__title__heading">Front-End Developer</h3>
 			        </div>
-			        <img class="card__header--logo-image" src="https://hasjob.co/_uploads/logos/cut27.png">
 			      </div>
 			      <div class="card__body">
-			        <p>We are looking for a kickass software engineer to manage Web Development as a part of the core team and get to live the startup life. Yes, we’re a high growth venture with significant traction and revenues besides money in the bank. More importantly though, we are a bunch of sports crazy freaks with a love for consumer apps and all things cool. So if you are a self-starter with attention to details, a penchant for perfection and look for solutions rather than just narrating the problem - then you’re the one for us.</p>
-			        <span class="chip">
-    						<span class="chip__text">Bangalore</span>
-							</span>
-							<span class="chip">
-    						<span class="chip__text">Full time</span>
-							</span>
+			        <div class="card__body__text">
+			        	<h3 class="card__body__text__heading">Playo</h3>
+			        	<span class="chip">
+    							<span class="chip__text">Bangalore</span>
+								</span>
+								<span class="chip">
+    							<span class="chip__text">Full time</span>
+								</span>
+			      	</div>
+			      	<div class="card__body__logo">
+			      		<img class="card__body__logo--img" src="https://hasjob.co/_uploads/logos/cut27.png">
+			      	</div>
 			      </div>
-			      <div class="mui-divider"></div>
-			      <div class="card__footer">
-			       	<a href="https://hasgeek.com" class="mui-btn mui-btn--flat mui-btn--accent">Apply</a>
-			    	</div>
 		    	</div>
 		    </div>
 		  </div>
@@ -225,30 +226,54 @@
 	<div>
 	  <h1>Form</h1>
 	  <form method="POST" accept-charset="UTF-8" class="mui-form">	  
-	    <div>
-	      <div>
-	        <div class="mui-textfield mui-textfield--float-label">
-	          <input autofocus class="field-title" name="title" type="text" value="">
-	          <label>Application title*</label>
-	            <p class="mui-form--helptext">The name of your application</p>
-	        </div>
-	      </div>
-	    </div>  
-	    <div>
-	      <div>
-	        <div class="mui-checkbox">
-	          <label>
-	            <input class="field-team_access" id="team_access" name="team_access" type="checkbox" value="y"> Requires access to teams
-	          </label>
-	        </div>
-	        <p class="mui-form--helptext">If your application is capable of assigning access permissions to teams, check this. Organization owners will then able to grant access to teams in their organizations</p>
-	      </div>
-	    </div>
-		  <div class="mui-form form-actions clearfix">
-		  	<div>
-		    	<button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">Register application</button>
-		  	</div>
-			</div>
+	  <div class="mui-textfield mui-textfield--float-label">
+	    <input type="text">
+	    <label>Name</label>
+	  </div>
+	  <div class="mui-checkbox">
+	    <label>
+	      <input type="checkbox" value="" checked>
+	      Option one
+	    </label>
+	  </div>
+	  <div class="mui-checkbox">
+	    <label>
+	      <input type="checkbox" value="">
+	      Option two
+	    </label>
+		</div>
+		<div class="mui-radio">
+	    <label>
+	      <input type="radio"
+	             name="optionsRadios"
+	             id="optionsRadios1"
+	             value="option1"
+	             checked>
+	      Option one
+	    </label>
+	  </div>
+	  <div class="mui-radio">
+	    <label>
+	      <input type="radio"
+	             name="optionsRadios"
+	             id="optionsRadios2"
+	             value="option2">
+	      Option two
+	    </label>
+	  </div>
+	  <div class="mui-select">
+	    <select>
+	      <option>Option 1</option>
+	      <option>Option 2</option>
+	      <option>Option 3</option>
+	      <option>Option 4</option>
+	    </select>
+	  </div>
+	  <div class="mui-textfield mui-textfield--float-label">
+	    <textarea></textarea>
+	    <label>Textarea</label>
+	  </div>
+	  <button type="submit" class="mui-btn mui-btn--primary mui-btn--raised">Submit</button>
 		</form>
 	</div>
 	<hr>
