@@ -7,20 +7,12 @@
   {% with site_links=[] %}
   	{% set site_links = site_links + [{'title': "Applied jobs", 'url': 'http://test.com', 'icon': 'assignment'}] %}
   	{% set site_links = site_links + [{'title': "Bookmarks", 'url': 'http://test.com', 'icon': 'bookmark'}] %}
-		{{ hgsidenavmaterial(site_title, site_logo="https://hasgeek.com/static/img/hg-banner.png", site_links=site_links) }}
+		{{ hgsidenavmaterial(site_links=site_links) }}
 	{% endwith %}
 {%- endblock %}
 
 {% block header -%}
-	{{ hgtopnavmaterial(site_title="Hasjob") }}
-{%- endblock %}
-
-{% block subheaderbox -%}
-  {% with site_sub_links=[] %}
-   	{% set site_sub_links = site_sub_links + [{'title': "Home", 'url': 'http://test.com', 'icon': 'home'}] %}
-   	{% set site_sub_links = site_sub_links + [{'title': "Post a job", 'url': 'http://test.com', 'icon': 'add_circle'}] %}
-		{{ hgsubtopnavmaterial(site_sub_links=site_sub_links) }}
-	{% endwith %}
+	{{ hgtopnavmaterial(site_title="Haasfdmndsmfbmndfmnsjob", side_menu_button=true) }}
 {%- endblock %}
 
 {% block basecontent %}
@@ -56,8 +48,8 @@
 		      <div class="card">
 			      <img src="../static/img/fifthel-banner.png" class="card__image">
 			      <div class="card__title">
-			        <h3 class="mui--text-title">Fifth Elephant 2017</h3>
-			        <h4 class="mui--text-subhead">27–28 July 2017, Bangalore</h4>
+			        <h3 class="mui--text-title card__title__heading">Fifth Elephant 2017</h3>
+			        <h4 class="mui--text-subhead card__title__heading">27–28 July 2017, Bangalore</h4>
 			      </div>
 			      <div class="card__body">
 			        <p>The Fifth Elephant is India’s best conference on data science, engineering and Machine Learning. This year is the sixth edition, and will feature talks on data engineering, architecture decisions, building data pipelines, IoT and data analytics.</p>
@@ -75,9 +67,9 @@
 		    <div class="grid__cell">
 		      <div class="card">
 			      <img src="../static/img/jsfoo-banner.png" class="card__image">
-			      <div class="card__title">
-			        <h3 class="mui--text-title">JSFoo 2017</h3>
-			        <h4 class="mui--text-subhead">15–16 September 2017, Bangalore</h4>
+						<div class="card__title">
+			        <h3 class="mui--text-title card__title__heading">JSFoo 2017</h3>
+			        <h4 class="mui--text-subhead card__title__heading">15–16 September 2017, Bangalore</h4>
 			      </div>
 			      <div class="card__body">
 			        <p>Our annual conference on JavaScript.</p>
@@ -99,8 +91,8 @@
 		      <div class="card">
 			      <div class="card__header">
 			        <div class="card__header__title">
-			        	<h3 class="mui--text-title card__header__title__heading">Kilter 2018</h3>
-			        	<h4 class="mui--text-subhead card__header__title__heading">1–2 April 2018</h4>
+			        	<h3 class="mui--text-title card__title__heading">Kilter 2018</h3>
+			        	<h4 class="mui--text-subhead card__title__heading">1–2 April 2018</h4>
 			        </div>
 			        <img class="card__header__logo-image" src="https://images.hasgeek.com/embed/file/eaaffeb43d0249b8b460388e4389df9c">
 			      </div>
@@ -121,10 +113,10 @@
 		      <div class="card">
 			      <div class="card__header">
 			        <div class="card__header__title">
-			          <div class="card__header__title__tag"><span>New!</span></div>
-			        	<h4 class="mui--text-subhead card__header__title__heading">12 July</h4>
-			        	<h3 class="mui--text-title card__header__title__heading">Front-End Developer</h3>
+			        	<h4 class="mui--text-caption mui--text-light card__title__heading">12 July</h4>
+			        	<h3 class="mui--text-title card__title__heading">Front-End Developer</h3>
 			        </div>
+			        <div class="card__header__title__tag"><span>New!</span></div>
 			      </div>
 			      <div class="card__body">
 			        <div class="card__body__text">
@@ -230,6 +222,7 @@
 	    <input type="text">
 	    <label>Name</label>
 	  </div>
+	  <p class="mui-form--helptext">Please enter your fullname</p>
 	  <div class="mui-checkbox">
 	    <label>
 	      <input type="checkbox" value="" checked>
@@ -262,6 +255,7 @@
 	    </label>
 	  </div>
 	  <div class="mui-select">
+	    <label>Select an option</label>
 	    <select>
 	      <option>Option 1</option>
 	      <option>Option 2</option>
