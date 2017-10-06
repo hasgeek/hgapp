@@ -35,6 +35,6 @@ coaster.app.init_app(app)
 db.init_app(app)
 db.app = app
 migrate = Migrate(app, db)
-baseframe.init_app(app, requires=['baseframe-mui', 'hgapp'])
+baseframe.init_app(app, requires=['baseframe-mui', 'hgapp'], theme='mui')
 lastuser.init_app(app)
 lastuser.init_usermanager(UserManager(db, models.User))

@@ -1,5 +1,5 @@
-{% extends "baseframe-material.html" -%}
-{% from "baseframe/components.html" import hgtopnavmaterial, hgsubtopnavmaterial, hgsidenavmaterial with context %}
+{% extends "baseframe/mui/baseframe.html.jinja2" -%}
+{% from "baseframe/mui/components.html.jinja2" import hgtopnav, hgsubtopnav, hgsidenav with context %}
 
 {% block title %}Material design kitchen sink page{% endblock %}
 
@@ -7,12 +7,12 @@
   {% with site_links=[] %}
   	{% set site_links = site_links + [{'title': "Applied jobs", 'url': 'http://test.com', 'icon': 'assignment'}] %}
   	{% set site_links = site_links + [{'title': "Bookmarks", 'url': 'http://test.com', 'icon': 'bookmark'}] %}
-		{{ hgsidenavmaterial(site_links=site_links) }}
+		{{ hgsidenav(site_links=site_links) }}
 	{% endwith %}
 {%- endblock %}
 
 {% block header -%}
-	{{ hgtopnavmaterial(site_title="Haasfdmndsmfbmndfmnsjob", side_menu_button=true) }}
+	{{ hgtopnav(site_title="Haasfdmndsmfbmndfmnsjob", side_menu_button=true) }}
 {%- endblock %}
 
 {% block basecontent %}
@@ -217,7 +217,7 @@
 	<!-- Forms -->
 	<div>
 	  <h1>Form</h1>
-	  <form method="POST" accept-charset="UTF-8" class="mui-form">	  
+	  <form method="POST" accept-charset="UTF-8" class="mui-form">
 	  <div class="mui-textfield mui-textfield--float-label">
 	    <input type="text">
 	    <label>Name</label>
@@ -279,37 +279,37 @@
 			  <table class="mui-table mui-table--bordered">
 					<thead>
 						<tr>
-							<th>Category</th> 
-							<th>#</th> <th>Ticket</th> 
-							<th>Available</th> 
-							<th>Sold</th> 
-							<th>Free</th> 
-							<th>Cancelled</th> 
-							<th>Current Price</th> 
+							<th>Category</th>
+							<th>#</th> <th>Ticket</th>
+							<th>Available</th>
+							<th>Sold</th>
+							<th>Free</th>
+							<th>Cancelled</th>
+							<th>Current Price</th>
 							<th>Net Sales</th>
 						</tr>
-					</thead> 
+					</thead>
 					<tbody>
 						<tr>
-							<td>Conference</td> 
-							<td>1</td> 
-							<td>Fragments 2017 conference ticket</td> 
-							<td>560</td> 
-							<td>40</td> 
-							<td>0</td> 
-							<td>2</td> 
-							<td>₹5,100</td> 
+							<td>Conference</td>
+							<td>1</td>
+							<td>Fragments 2017 conference ticket</td>
+							<td>560</td>
+							<td>40</td>
+							<td>0</td>
+							<td>2</td>
+							<td>₹5,100</td>
 							<td>₹1,66,470</td>
 						</tr>
 						<tr>
-						  <td>Conference</td> 
-							<td>2</td> 
-							<td>Cross-platform developer ticket</td> 
-							<td>497</td> 
-							<td>3</td> 
-							<td>0</td> 
-							<td>0</td> 
-							<td>₹12,700</td> 
+						  <td>Conference</td>
+							<td>2</td>
+							<td>Cross-platform developer ticket</td>
+							<td>497</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>₹12,700</td>
 							<td>₹33,200</td>
 						</tr>
 					</tbody>
