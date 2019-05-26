@@ -17,6 +17,9 @@ SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/hgapp'
 SECRET_KEY = 'make this something random'
 #: Cache type
 CACHE_TYPE = 'redis'
+#: RQ settings
+RQ_REDIS_URL = 'redis://localhost:6379/0'
+RQ_SCHEDULER_INTERVAL = 1
 #: Timezone
 TIMEZONE = 'Asia/Kolkata'
 #: Lastuser server
@@ -46,5 +49,3 @@ DEFAULT_MAIL_SENDER = MAIL_DEFAULT_SENDER  # For compatibility with older Flask-
 ADMINS = []
 #: Log file
 LOGFILE = 'error.log'
-# redis settings for RQ
-REDIS_URL = 'redis://localhost:6379/0'
