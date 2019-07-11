@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 #: Site title
 SITE_TITLE = 'HasGeek App'
 #: Site id (for network bar)
@@ -21,7 +22,9 @@ LASTUSER_CLIENT_ID = ''
 #: Lastuser client secret
 LASTUSER_CLIENT_SECRET = ''
 #: Lastuser cookie domain
-LASTUSER_COOKIE_DOMAIN = None  # if hosting multiple apps in subdomains, use '.mydomain.tld'
+LASTUSER_COOKIE_DOMAIN = (
+    None
+)  # if hosting multiple apps in subdomains, use '.mydomain.tld'
 #: Mail settings
 #: MAIL_FAIL_SILENTLY : default True
 #: MAIL_SERVER : default 'localhost'

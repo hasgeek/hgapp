@@ -32,4 +32,3 @@ msgstr ""
 #: hgapp/views/login.py:49
 msgid "NA"
 msgstr ""
-

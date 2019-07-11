@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 #: Debug mode (put this value in development.py only, never in settings.py)
 DEBUG = True
 #: Site title
@@ -31,7 +32,9 @@ LASTUSER_CLIENT_SECRET = ''
 #: Lastuser secret key
 LASTUSER_SECRET_KEY = SECRET_KEY
 #: Lastuser cookie domain
-LASTUSER_COOKIE_DOMAIN = None  # if hosting multiple apps in subdomains, use '.mydomain.tld'
+LASTUSER_COOKIE_DOMAIN = (
+    None
+)  # if hosting multiple apps in subdomains, use '.mydomain.tld'
 #: Mail settings
 #: MAIL_FAIL_SILENTLY : default True
 #: MAIL_SERVER : default 'localhost'
