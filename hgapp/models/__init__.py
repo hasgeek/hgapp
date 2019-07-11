@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
+# flake8: noqa
 
-from coaster.sqlalchemy import IdMixin, TimestampMixin, BaseMixin, BaseNameMixin
 from coaster.db import db
+from coaster.sqlalchemy import BaseMixin, BaseNameMixin, IdMixin, TimestampMixin
 
 TimestampMixin.__with_timezone__ = True
 
-from .user import *
+from .user import *  # isort:skip

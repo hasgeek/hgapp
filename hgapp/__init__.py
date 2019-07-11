@@ -3,13 +3,16 @@
 # The imports in this file are order-sensitive
 
 from __future__ import absolute_import
+
 from flask import Flask
 from flask_migrate import Migrate
+from flask_rq2 import RQ
+
+import coaster.app
+from baseframe import Version, assets, baseframe
 from flask_lastuser import Lastuser
 from flask_lastuser.sqlalchemy import UserManager
-from flask_rq2 import RQ
-from baseframe import baseframe, assets, Version
-import coaster.app
+
 from ._version import __version__
 
 version = Version(__version__)
@@ -22,8 +25,8 @@ rq = RQ()
 
 # Second, import the models and views
 
-from . import models, views  # NOQA
-from .models import db
+from . import models, views  # NOQA  # isort:skip
+from .models import db  # isort:skip
 
 # Third, setup baseframe and assets
 

@@ -1,19 +1,11 @@
 # -*- coding: utf-8 -*-
 
-#: Debug mode (put this value in development.py only, never in settings.py)
-DEBUG = True
 #: Site title
 SITE_TITLE = 'HasGeek App'
 #: Site id (for network bar)
 SITE_ID = ''
-#: Google Analytics code
-GA_CODE = ''
-#: Google site verification code (inserted as a meta tag)
-GOOGLE_SITE_VERIFICATION = ''
-#: Typekit code
-TYPEKIT_CODE = ''
 #: Database backend
-SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/hgapp'
+SQLALCHEMY_DATABASE_URI = 'postgresql:///hgapp'
 #: Secret key
 SECRET_KEY = 'make this something random'
 #: Cache type
@@ -29,8 +21,6 @@ LASTUSER_SERVER = 'https://auth.hasgeek.com/'
 LASTUSER_CLIENT_ID = ''
 #: Lastuser client secret
 LASTUSER_CLIENT_SECRET = ''
-#: Lastuser secret key
-LASTUSER_SECRET_KEY = SECRET_KEY
 #: Lastuser cookie domain
 LASTUSER_COOKIE_DOMAIN = (
     None
@@ -47,7 +37,6 @@ LASTUSER_COOKIE_DOMAIN = (
 MAIL_FAIL_SILENTLY = False
 MAIL_SERVER = 'localhost'
 MAIL_DEFAULT_SENDER = 'HasGeek <test@example.com>'
-DEFAULT_MAIL_SENDER = MAIL_DEFAULT_SENDER  # For compatibility with older Flask-Mail
 #: Logging: recipients of error emails
 ADMINS = []
 #: Log file

@@ -2,6 +2,7 @@
 *.pyc
 test.db
 *.wpr
+.vscode
 .project
 .pydevproject
 .settings
@@ -15,7 +16,6 @@ nosetests.xml
 .sass-cache
 .idea
 instance/settings.py
-instance/testing.py
 instance/production.py
 instance/development.py
 baseframe-packed.css
