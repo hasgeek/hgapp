@@ -16,6 +16,10 @@ RQ_SCHEDULER_INTERVAL = 1
 TIMEZONE = 'Asia/Kolkata'
 #: Lastuser server
 LASTUSER_SERVER = 'https://auth.hasgeek.com/'
+#: Lastuser client id
+LASTUSER_CLIENT_ID = ''
+#: Lastuser client secret
+LASTUSER_CLIENT_SECRET = ''
 #: Lastuser cookie domain
 LASTUSER_COOKIE_DOMAIN = None  # if hosting multiple apps in subdomains, use '.mydomain.tld'
 #: Mail settings
