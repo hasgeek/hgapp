@@ -1,8 +1,8 @@
 Flask==1.1.1
-Flask-SQLAlchemy==2.4.0
+Flask-SQLAlchemy==2.4.1
 Flask-RQ2==18.3
 Flask-Migrate==2.5.2
-redis==3.3.4
+redis==3.3.8
 https://github.com/hasgeek/coaster/archive/master.zip
 https://github.com/hasgeek/baseframe/archive/master.zip
 https://github.com/hasgeek/flask-lastuser/archive/master.zip
