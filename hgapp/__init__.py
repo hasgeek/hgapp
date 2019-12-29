@@ -2,7 +2,7 @@
 
 # The imports in this file are order-sensitive
 
-from __future__ import absolute_import
+
 
 from flask import Flask
 from flask_migrate import Migrate

@@ -3,13 +3,13 @@ HasGeek App Boilerplate
 
 [![Build status](https://secure.travis-ci.org/hasgeek/hgapp.svg)](https://travis-ci.org/hasgeek/hgapp) [![Coverage Status](https://coveralls.io/repos/hasgeek/hgapp/badge.svg)](https://coveralls.io/r/hasgeek/hgapp)
 
-Base template for an app that uses Lastuser, Baseframe and Coaster with Flask and SQLAlchemy.
+Base template for an app that uses Lastuser, Baseframe and Coaster with Flask and SQLAlchemy. Supports Python 3+ only.
 
 Setup
 -----
 
 1. Clone this repository into your development environment.
-2. Create a Python virtualenv and activate it.
+2. Create a Python 3 virtualenv and activate it.
 3. Install requirements:
     * `pip install -r requirements.txt`
     * `pip install -r test_requirements.txt`
