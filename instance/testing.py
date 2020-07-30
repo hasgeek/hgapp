@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 #: Site title
-SITE_TITLE = 'HasGeek App'
+SITE_TITLE = 'Hasgeek App'
 #: Site id (for network bar)
 SITE_ID = ''
 #: Database backend
@@ -22,9 +22,8 @@ LASTUSER_CLIENT_ID = ''
 #: Lastuser client secret
 LASTUSER_CLIENT_SECRET = ''
 #: Lastuser cookie domain
-LASTUSER_COOKIE_DOMAIN = (
-    None
-)  # if hosting multiple apps in subdomains, use '.mydomain.tld'
+# if hosting multiple apps in subdomains, use '.mydomain.tld'
+LASTUSER_COOKIE_DOMAIN = None
 #: Mail settings
 #: MAIL_FAIL_SILENTLY : default True
 #: MAIL_SERVER : default 'localhost'
@@ -36,7 +35,7 @@ LASTUSER_COOKIE_DOMAIN = (
 #: MAIL_DEFAULT_SENDER : default None
 MAIL_FAIL_SILENTLY = False
 MAIL_SERVER = 'localhost'
-MAIL_DEFAULT_SENDER = 'HasGeek <test@example.com>'
+MAIL_DEFAULT_SENDER = 'Hasgeek <test@example.com>'
 #: Logging: recipients of error emails
 ADMINS = []
 #: Log file

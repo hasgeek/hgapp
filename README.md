@@ -1,4 +1,4 @@
-HasGeek App Boilerplate
+Hasgeek App Boilerplate
 =======================
 
 [![Build status](https://secure.travis-ci.org/hasgeek/hgapp.svg)](https://travis-ci.org/hasgeek/hgapp) [![Coverage Status](https://coveralls.io/repos/hasgeek/hgapp/badge.svg)](https://coveralls.io/r/hasgeek/hgapp)
